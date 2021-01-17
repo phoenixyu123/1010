@@ -1,0 +1,16 @@
+<script>
+    //es6如何定义变量，变量的特点
+    //js定义 var a = 1;
+    //es6写法定义变量,使用关键字 let let a = 10;
+
+    //1 代码块内定义变量
+    {
+        var a = 10
+        let b = 20
+    }
+    //2 在代码块外部输出
+    console.log(a)
+    console.log(b)//Uncaught ReferenceError: b is not defined,let作用范围只在局部内
+
+
+</script>

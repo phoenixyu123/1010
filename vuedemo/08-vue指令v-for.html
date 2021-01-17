@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <ul>
+            <li v-for="n in 10">{{n}}</li>
+        </ul> -->
+
+        <!-- n的值从1-10，索引值从0开始到9 -->
+        <ol>
+            <li v-for = "(n,index) in 10">{{n}} -- {{index}}</li>
+        </ol>
+        <table border="10">
+            <tr v-for = "user in userList">
+                <td>{{user.id}}</td>
+                <td>{{user.username}}</td>
+                <td>{{user.age}}</td>
+            </tr>
+        </table>
+
+    </div>
+    <script src="vue.min.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                userList:[
+                    { id: 1, username : "test1", age : 1},
+                    { id: 2, username : "test2", age : 2},
+                    { id: 3, username : "test3", age : 3}
+                ]
+            }
+        })
+    </script>
+</body>
+
+</html>
